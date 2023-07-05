@@ -10,8 +10,10 @@ public class UngDungDocSoThanhChu {
         String[] soLe = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
         String[] hangChuc = {"teen", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
         String tram = "hundred";
-        if (number >= 0 && number < 10) {
-            number = number - 1;
+        if (number <= 0){
+            System.out.println("Không thể đọc số này");
+        } else if (number < 10) {
+            number = number;
             System.out.println(soLe[number]);
         } else if (number >= 10 && number <= 20) {
             if (number <= 15) {
