@@ -55,68 +55,11 @@ public class UngDungDocSoThanhChu {
             } else if (number % 10 != 0) {
                 int b = a * 10 + 1;
                 number = number - b;
-                System.out.println(soLe[number] + " " + tram + " and " + hangChuc[c + 1] + "-" + soLe[number + 1]);
+                System.out.println(soLe[c] + " " + tram + " and " + hangChuc[number] + "-" + soLe[number + 1]);
             } else {
                 System.out.println(soLe[c] + " " + tram +  " and " + hangChuc[area-1]);
             }
         }
-//        } else if (number >= 20 && number < 30) {
-//            if (number == 20) {
-//                System.out.println(hangChuc[1]);
-//            } else {
-//                number = number - 21;
-//                System.out.println(hangChuc[1] + "-" + soLe[number]);
-//            }
-//        } else if (number >= 30 && number < 40) {
-//            if (number == 30) {
-//                System.out.println(hangChuc[2]);
-//            } else {
-//                number = number - 31;
-//                System.out.println(hangChuc[2] + "-" + soLe[number]);
-//            }
-//        } else if (number >= 40 && number < 50) {
-//            if (number == 40) {
-//                System.out.println(hangChuc[3]);
-//            } else {
-//                number = number - 41;
-//                System.out.println(hangChuc[3] + "-" + soLe[number]);
-//            }
-//        } else if (number >= 50 && number < 60) {
-//            if (number == 50) {
-//                System.out.println(hangChuc[4]);
-//            } else {
-//                number = number - 51;
-//                System.out.println(hangChuc[4] + "-" + soLe[number]);
-//            }
-//        } else if (number >= 60 && number < 70) {
-//            if (number == 60) {
-//                System.out.println(hangChuc[5]);
-//            } else {
-//                number = number - 61;
-//                System.out.println(hangChuc[5] + "-" + soLe[number]);
-//            }
-//        } else if (number >= 70 && number < 80) {
-//            if (number == 70) {
-//                System.out.println(hangChuc[6]);
-//            } else {
-//                number = number - 71;
-//                System.out.println(hangChuc[6] + "-" + soLe[number]);
-//            }
-//        } else if (number >= 80 && number < 90) {
-//            if (number == 80) {
-//                System.out.println(hangChuc[7]);
-//            } else {
-//                number = number - 81;
-//                System.out.println(hangChuc[7] + "-" + soLe[number]);
-//            }
-//        } else if (number >= 90 && number < 100) {
-//            if (number == 90) {
-//                System.out.println(hangChuc[8]);
-//            } else {
-//                number = number - 91;
-//                System.out.println(hangChuc[8] + "-" + soLe[number]);
-//            }
-
     }
 }
 
