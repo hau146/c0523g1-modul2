@@ -39,9 +39,9 @@ public class StopWatch {
 
     private void stop() {
         this.end = new Date();
-        long h = star.getHours();
-        long m = star.getMinutes();
-        long s = star.getSeconds();
+        long h = end.getHours();
+        long m = end.getMinutes();
+        long s = end.getSeconds();
         this.endTime = System.currentTimeMillis();
         System.out.println("Thời gian kết thúc là: " + h + "h " + m + "m " + s + "s");
     }
