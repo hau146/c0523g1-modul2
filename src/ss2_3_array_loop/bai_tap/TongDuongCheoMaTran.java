@@ -24,10 +24,15 @@ public class TongDuongCheoMaTran {
         }
 
         int sum = 0;
+        int sum2 = 0;
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i][i];
         }
+        for (int i = arr.length-1 ; i >= 0 ; i--) {
+            sum2 += arr[i][i];
+        }
         System.out.println();
         System.out.println("Tổng đường chéo chính là : " + sum);
+        System.out.println("Tổng đường chéo phụ là : " + sum2);
     }
 }

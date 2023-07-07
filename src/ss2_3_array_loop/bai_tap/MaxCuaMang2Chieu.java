@@ -27,8 +27,8 @@ public class MaxCuaMang2Chieu {
         }
         System.out.println();
         int max = array[0][0];
-        for (int i = 1; i < array.length; i++) {
-            for (int j = 1; j < array[i].length; j++) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
                 if (max < array[i][j]) {
                     max = array[i][j];
                 }

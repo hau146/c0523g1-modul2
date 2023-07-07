@@ -61,6 +61,5 @@ public class StopWatch {
         String stop = scanner.nextLine();
         time.stop();
         System.out.println("thời gian đã trôi qua: " + time.getElapsedTime() + " milisecond giây");
-
     }
 }
