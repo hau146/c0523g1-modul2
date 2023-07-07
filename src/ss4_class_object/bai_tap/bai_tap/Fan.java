@@ -15,7 +15,7 @@ public class Fan {
 
     }
 
-    public Fan(int speed, double radius, boolean on, String color) {
+    private Fan(int speed, double radius, boolean on, String color) {
         this.speed = speed;
         this.on = on;
         this.radius = radius;
@@ -23,36 +23,47 @@ public class Fan {
     }
 
 
-    public int getSpeed() {
+    private int getSpeed() {
         return this.speed;
     }
 
-    public void setSpeed(int speed) {
+
+    private void setSpeed(int speed) {
         this.speed = speed;
     }
 
-    public boolean isOn() {
+    private boolean isOn() {
         return this.on;
     }
 
-    public void setOn(boolean on) {
+    private void setOn(boolean on) {
         this.on = on;
     }
 
-    public double getRadius() {
+    private double getRadius() {
         return this.radius;
     }
 
-    public void setRadius(double radius) {
+    private void setRadius(double radius) {
         this.radius = radius;
     }
 
-    public String getColor() {
+    private String getColor() {
         return this.color;
     }
 
-    public void setColor(String color) {
+    private void setColor(String color) {
         this.color = color;
+    }
+
+    private boolean turnOn() {
+        this.on = true;
+        return this.on;
+    }
+
+    private boolean turnOff() {
+        this.on = false;
+        return this.on;
     }
 
 
@@ -68,12 +79,20 @@ public class Fan {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập vào để xem: ");
         String check = scanner.nextLine();
-        Fan fan1 = new Fan(3, 10, true, "yellow");
+        Fan fan1 = new Fan(FAST, 10, true, "yellow");
         Fan fan2 = new Fan(MEDIUM, 5, false, "blue");
         Fan fan3 = new Fan();
         if (check.equals("fan1")) {
             System.out.println(fan1.toString());
+            System.out.println("Bấm để tắt quạt");
+            String off = scanner.nextLine();
+            fan1.on = fan1.turnOff();
+            System.out.println(fan1.toString());
         } else if (check.equals("fan2")) {
+            System.out.println(fan2.toString());
+            System.out.println("Bấm để bật quạt");
+            String on = scanner.nextLine();
+            fan2.on = fan2.turnOn();
             System.out.println(fan2.toString());
         } else {
             System.out.println(fan3.toString());

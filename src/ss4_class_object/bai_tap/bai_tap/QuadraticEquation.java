@@ -7,39 +7,39 @@ public class QuadraticEquation {
     double b;
     double c;
 
-    public QuadraticEquation() {
+    private QuadraticEquation() {
 
     }
 
-    public QuadraticEquation(double a, double b, double c) {
+    private QuadraticEquation(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    public double getA() {
+    private double getA() {
         return a;
     }
 
-    public double getB() {
+    private double getB() {
         return b;
     }
 
-    public double getC() {
+    private double getC() {
         return c;
     }
 
-    public double getDiscriminant() {
+    private double getDiscriminant() {
         return (this.b * this.b) - (4 * this.a * this.c);
     }
 
-    public double getRoot1() {
+    private double getRoot1() {
         double square = this.b * this.b;
         double total = 4 * this.a * this.c;
         return (-this.b + Math.pow(square - total, 1 / 2)) / 2 * this.a;
     }
 
-    public double getRoot2() {
+    private double getRoot2() {
         double square = this.b * this.b;
         double total = 4 * this.a * this.c;
         return (-this.b - Math.pow(square - total, 1 / 2)) / 2 * this.a;
