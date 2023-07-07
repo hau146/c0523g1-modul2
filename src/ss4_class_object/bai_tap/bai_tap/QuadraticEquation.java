@@ -54,6 +54,7 @@ public class QuadraticEquation {
         System.out.println("Nhập vào c: ");
         double c = Double.parseDouble(scanner.nextLine());
         QuadraticEquation area = new QuadraticEquation(a, b, c);
+
         if (area.getDiscriminant() > 0) {
             System.out.println(area.getRoot1());
             System.out.println(area.getRoot2());
