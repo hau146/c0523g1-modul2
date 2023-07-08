@@ -34,15 +34,11 @@ public class QuadraticEquation {
     }
 
     private double getRoot1() {
-        double square = this.b * this.b;
-        double total = 4 * this.a * this.c;
-        return (-this.b + Math.pow(square - total, 1 / 2)) / 2 * this.a;
+        return (-this.b + Math.pow(this.getDiscriminant(), 1 / 2)) / 2 * this.a;
     }
 
     private double getRoot2() {
-        double square = this.b * this.b;
-        double total = 4 * this.a * this.c;
-        return (-this.b - Math.pow(square - total, 1 / 2)) / 2 * this.a;
+        return (-this.b - Math.pow(this.getDiscriminant(), 1 / 2)) / 2 * this.a;
     }
 
     public static void main(String[] args) {

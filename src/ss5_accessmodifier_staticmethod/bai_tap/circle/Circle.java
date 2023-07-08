@@ -4,8 +4,8 @@ import java.awt.geom.Area;
 
 public class Circle {
     static final double pi = 3.14;
-    double radius = 1.0;
-    String color = "red";
+    private double radius = 1.0;
+    private String color = "red";
 
     Circle() {
 
