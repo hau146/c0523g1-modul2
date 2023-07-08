@@ -36,9 +36,8 @@ public class Point2D {
     }
 
     protected float[] getXY() {
-        float[] getXY = new float[2];
-        getXY[0] = getX();
-        getXY[1] = getY();
+        float[] getXY = new float[]{getX(), getY()};
+
         return getXY;
     }
 

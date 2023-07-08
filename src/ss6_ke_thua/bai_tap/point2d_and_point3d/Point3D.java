@@ -32,10 +32,7 @@ public class Point3D extends Point2D {
     }
 
     protected float[] getXYZ() {
-        float[] getXYZ = new float[3];
-        getXYZ[0] = getX();
-        getXYZ[1] = getY();
-        getXYZ[2] = getZ();
+        float[] getXYZ = new float[]{getX(), getY(), getZ()};
         return getXYZ;
     }
 
@@ -45,15 +42,15 @@ public class Point3D extends Point2D {
     }
 
     public static void main(String[] args) {
-        Point3D point3D = new Point3D();
-        System.out.println(point3D);
+        Point2D point2D = new Point3D();
+        System.out.println(point2D);
         System.out.println();
 
-        point3D = new Point3D(3);
-        System.out.println(point3D);
+        point2D = new Point3D(3);
+        System.out.println(point2D);
         System.out.println();
 
-        point3D = new Point3D(3, 4, 5);
-        System.out.println(point3D);
+        point2D = new Point3D(3, 4, 5);
+        System.out.println(point2D);
     }
 }
