@@ -26,9 +26,9 @@ public class Point3D extends Point2D {
     }
 
     protected void setXYZ(float x, float y, float z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+        x = getX();
+        y = getY();
+        z = getZ();
     }
 
     protected float[] getXYZ() {

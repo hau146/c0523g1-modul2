@@ -31,13 +31,12 @@ public class Point2D {
     }
 
     protected void setXY(float x, float y) {
-        this.x = x;
-        this.y = y;
+        x = getX();
+        y = getY();
     }
 
     protected float[] getXY() {
         float[] getXY = new float[]{getX(), getY()};
-
         return getXY;
     }
 
