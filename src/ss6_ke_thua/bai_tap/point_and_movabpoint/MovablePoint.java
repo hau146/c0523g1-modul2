@@ -3,8 +3,8 @@ package ss6_ke_thua.bai_tap.point_and_movabpoint;
 import java.util.Arrays;
 
 public class MovablePoint extends Point {
-    protected float xSpeed = 0.0f;
-    protected float ySpeed = 0.0f;
+    private float xSpeed = 0.0f;
+    private float ySpeed = 0.0f;
 
     protected MovablePoint() {
     }
@@ -52,8 +52,10 @@ public class MovablePoint extends Point {
     }
 
     public MovablePoint move() {
-        x += xSpeed;
-        y += ySpeed;
+        super.setX(super.getX() + xSpeed);
+        super.setY(super.getY() + ySpeed);
+//        x += xSpeed;
+//        y += ySpeed;
         return this;
     }
 

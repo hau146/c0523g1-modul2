@@ -3,8 +3,8 @@ package ss6_ke_thua.bai_tap.point_and_movabpoint;
 import java.util.Arrays;
 
 public class Point {
-    protected float x = 0.0f;
-    protected float y = 0.0f;
+    private float x = 0.0f;
+    private float y = 0.0f;
     protected Point(){}
     protected Point(float x, float y){
         this.x = x;
