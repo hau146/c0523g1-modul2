@@ -1,11 +1,24 @@
 package ss5_accessmodifier_staticmethod.bai_tap.student;
 
 public class Student {
-     String name = "john";
-     String classes = "C02";
+    private String name = "john";
+    private String classes = "C02";
 
-    Student(){
+    Student() {
 
+    }
+
+    public Student(String name, String classes) {
+        this.name = name;
+        this.classes = classes;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getClasses() {
+        return classes;
     }
 
     public void setName(String name) {
