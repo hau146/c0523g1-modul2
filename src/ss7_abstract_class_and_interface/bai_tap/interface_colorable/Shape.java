@@ -2,7 +2,7 @@ package ss7_abstract_class_and_interface.bai_tap.interface_colorable;
 
 
 
-    public class Shape {
+     public class Shape {
         private String color = "green";
 
 

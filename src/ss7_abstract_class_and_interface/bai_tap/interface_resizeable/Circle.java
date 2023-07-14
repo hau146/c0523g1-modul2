@@ -10,8 +10,8 @@ public class Circle extends Shape implements Resizeable {
         this.radius = radisu;
     }
 
-    public Circle(double radius, String color, boolean filled, double size) {
-        super(color, filled, size);
+    public Circle(double radius, String color, boolean filled) {
+        super(color, filled);
         this.radius = radius;
     }
 
@@ -37,29 +37,12 @@ public class Circle extends Shape implements Resizeable {
                 "radius=" + radius +
                 ", color='" + color + '\'' +
                 ", filled=" + filled +
-                ", size=" + size +
                 ", which is a subclass of " + super.toString() +
                 '}';
     }
 
     @Override
     public void resize(double percent) {
-//        this.size = this.radius / (Math.pow((1 + percent), 1 / 2));
-        this.size = this.radius * percent;
+        this.radius = this.radius * Math.sqrt(percent + 1);
     }
-
-    public static void main(String[] args) {
-        Circle circle = new Circle();
-        System.out.println(circle + "\n");
-
-        circle = new Circle(3.5);
-        System.out.println(circle + "\n");
-
-        circle = new Circle(3.5, "red", true, 30);
-        System.out.println(circle);
-
-        circle.resize(0.1);
-    }
-
-
 }

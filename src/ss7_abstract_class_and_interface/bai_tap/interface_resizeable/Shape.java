@@ -3,15 +3,13 @@ package ss7_abstract_class_and_interface.bai_tap.interface_resizeable;
 public class Shape implements Resizeable {
     protected String color = "green";
     protected boolean filled = true;
-    protected double size;
 
     protected Shape() {
     }
 
-    public Shape(String color, boolean filled, double size) {
+    public Shape(String color, boolean filled) {
         this.color = color;
         this.filled = filled;
-        this.size = size;
     }
 
     public String getColor() {
@@ -30,20 +28,12 @@ public class Shape implements Resizeable {
         this.filled = filled;
     }
 
-    public double getSize() {
-        return size;
-    }
-
-    public void setSize(double size) {
-        this.size = size;
-    }
 
     @Override
     public String toString() {
         return "Shape{" +
                 "color='" + color + '\'' +
                 ", filled=" + filled +
-                ", size=" + size +
                 '}';
     }
 
@@ -52,7 +42,7 @@ public class Shape implements Resizeable {
         System.out.println(shape);
         System.out.println();
 
-        shape = new Shape("black", false, 70);
+        shape = new Shape("black", false);
         System.out.println(shape);
     }
 

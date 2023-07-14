@@ -21,22 +21,7 @@ public class TennisGame {
         String scoreName = "";
         int tennisPoint = 0;
         if (isaBoolean(playerScore1, playerScore2)) {
-            switch (playerScore1) {
-                case ZERO:
-                    scoreName = "Love-All";
-                    break;
-                case ONE:
-                    scoreName = "Fifteen-All";
-                    break;
-                case TWO:
-                    scoreName = "Thirty-All";
-                    break;
-                case THREE:
-                    scoreName = "Forty-All";
-                    break;
-                default:
-                    scoreName = "Deuce";
-            }
+            scoreName = getResult(playerScore1);
         } else if (isaBoolean1(playerScore1, playerScore2)) {
             int minusResult = playerScore1 - playerScore2;
             boolean result1 = minusResult == ONE;
@@ -53,21 +38,47 @@ public class TennisGame {
                     scoreName += "-";
                     tennisPoint = playerScore2;
                 }
-                switch (tennisPoint) {
-                    case ZERO:
-                        scoreName += "Love";
-                        break;
-                    case ONE:
-                        scoreName += "Fifteen";
-                        break;
-                    case TWO:
-                        scoreName += "Thirty";
-                        break;
-                    case THREE:
-                        scoreName += "Forty";
-                        break;
-                }
+                scoreName = getResult2(scoreName, tennisPoint);
             }
+        }
+        return scoreName;
+    }
+
+    private static String getResult2(String scoreName, int tennisPoint) {
+        switch (tennisPoint) {
+            case ZERO:
+                scoreName += "Love";
+                break;
+            case ONE:
+                scoreName += "Fifteen";
+                break;
+            case TWO:
+                scoreName += "Thirty";
+                break;
+            case THREE:
+                scoreName += "Forty";
+                break;
+        }
+        return scoreName;
+    }
+
+    private static String getResult(int playerScore1) {
+        String scoreName;
+        switch (playerScore1) {
+            case ZERO:
+                scoreName = "Love-All";
+                break;
+            case ONE:
+                scoreName = "Fifteen-All";
+                break;
+            case TWO:
+                scoreName = "Thirty-All";
+                break;
+            case THREE:
+                scoreName = "Forty-All";
+                break;
+            default:
+                scoreName = "Deuce";
         }
         return scoreName;
     }

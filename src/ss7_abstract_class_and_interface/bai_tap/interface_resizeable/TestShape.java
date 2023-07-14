@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class TestShape {
     public static void main(String[] args) {
         Shape[] shape = new Shape[3];
-        shape[0] = new Circle(3.5, "red", true, 0.3);
-        shape[1] = new Rectangle(5, 7, "blue", true, 0.7);
-        shape[2] = new Square(5, "white", false, 0.2);
+        shape[0] = new Circle(3.5, "red", true);
+        shape[1] = new Rectangle(5, 7, "blue", true);
+        shape[2] = new Square(5, "white", false);
 
         System.out.println("Các hình trước khi tăng kích thước là");
         for (Shape shapes : shape) {

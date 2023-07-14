@@ -4,6 +4,7 @@ public class Rectangle extends Shape implements Resizeable {
     private double width = 4;
     private double height = 6;
 
+
     public Rectangle() {
     }
 
@@ -12,8 +13,8 @@ public class Rectangle extends Shape implements Resizeable {
         this.height = height;
     }
 
-    public Rectangle(int width, int height, String color, boolean filled, double size) {
-        super(color, filled, size);
+    public Rectangle(int width, int height, String color, boolean filled) {
+        super(color, filled);
         this.width = width;
         this.height = height;
     }
@@ -40,26 +41,15 @@ public class Rectangle extends Shape implements Resizeable {
                 "width=" + width +
                 ", height=" + height +
                 ", color='" + color + '\'' +
-                ", size=" + size +
                 ", filled=" + filled + ", which is a subclass of " + super.toString() +
                 '}';
     }
 
     @Override
     public void resize(double percent) {
-        this.size = this.width * this.height * percent;
+        double k = width / height;
+        this.height = this.height * Math.sqrt(1 + percent);
+        this.width = k * this.height;
+
     }
-
-    public static void main(String[] args) {
-        Rectangle rectangle = new Rectangle();
-        System.out.println(rectangle + "\n");
-
-        rectangle = new Rectangle(5, 7);
-        System.out.println(rectangle + "\n");
-
-        rectangle = new Rectangle(5, 7, "blue", true, 50);
-        System.out.println(rectangle + "\n");
-    }
-
-
 }
