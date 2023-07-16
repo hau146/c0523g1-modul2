@@ -9,13 +9,13 @@ public class Clientlmpl implements IClient {
     private static int size = 0;
 
     static {
-        clientList = new Client[10];
+        size = 5;
+        clientList = new Client[size * size];
         clientList[0] = new Client(1, "Long", 23, "khách VIP");
         clientList[1] = new Client(2, "Hậu", 20, "khách du lịch");
         clientList[2] = new Client(3, "Hưng", 27, "khách hàng");
         clientList[3] = new Client(4, "Thiện", 26, "khách mời");
         clientList[4] = new Client(5, "Liên", 26, "khách quan");
-        size = 5;
     }
 
 
