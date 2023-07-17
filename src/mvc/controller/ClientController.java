@@ -1,13 +1,13 @@
 package mvc.controller;
 
-import mvc.model.Client;
-import mvc.service.ClientSeriveLmpl;
+import mvc.model.ClientModel;
+import mvc.service.ClientSeriveImpl;
 import mvc.service.ICilentService;
 
 import java.util.Scanner;
 
 public class ClientController {
-    private static ICilentService cilentService = new ClientSeriveLmpl();
+    private static ICilentService cilentService = new ClientSeriveImpl();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -24,8 +24,8 @@ public class ClientController {
             click = Integer.parseInt(scanner.nextLine());
             switch (click) {
                 case 1:
-                    Client[] controllers = cilentService.finAll();
-                    for (Client controller : controllers) {
+                    ClientModel[] controllers = cilentService.finAll();
+                    for (ClientModel controller : controllers) {
                         System.out.println(controller);
                     }
                     break;
@@ -38,7 +38,7 @@ public class ClientController {
                     String nameClient = scanner.nextLine();
                     System.out.println("Nhập vào loại khách");
                     String typeClient = scanner.nextLine();
-                    Client clients = new Client(idClient, nameClient, ageClient, typeClient);
+                    ClientModel clients = new ClientModel(idClient, nameClient, ageClient, typeClient);
                     cilentService.addCilent(clients);
                     System.out.println("Đã thêm thành công");
                     break;

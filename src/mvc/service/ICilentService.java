@@ -1,10 +1,10 @@
 package mvc.service;
 
-import mvc.model.Client;
+import mvc.model.ClientModel;
 
 public interface ICilentService {
-    Client[] finAll();
-    void addCilent (Client cilentController);
+    ClientModel[] finAll();
+    void addCilent (ClientModel cilentController);
     void deleteCilentById(int id);
     void seachClient(String name);
 }

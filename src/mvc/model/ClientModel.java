@@ -1,15 +1,15 @@
 package mvc.model;
 
-public class Client {
+public class ClientModel {
     private int id;
     private String name;
     private int age;
     private String typeCustomer;
 
-    public Client(int idClient, String nameClient, String typeClient) {
+    public ClientModel(int idClient, String nameClient, String typeClient) {
     }
 
-    public Client(int id, String name, int age, String typeCustomer) {
+    public ClientModel(int id, String name, int age, String typeCustomer) {
         this.id = id;
         this.name = name;
         this.age = age;

@@ -1,27 +1,27 @@
 package mvc.repository;
 
-import mvc.model.Client;
+import mvc.model.ClientModel;
 
 import java.util.Arrays;
 
-public class Clientlmpl implements IClient {
-    private static Client[] clientList;
+public class ClienRepositorytlmpl implements IClientRepository {
+    private static ClientModel[] clientList;
     private static int size = 0;
 
     static {
         size = 5;
-        clientList = new Client[size * size];
-        clientList[0] = new Client(1, "Long", 23, "khách VIP");
-        clientList[1] = new Client(2, "Hậu", 20, "khách du lịch");
-        clientList[2] = new Client(3, "Hưng", 27, "khách hàng");
-        clientList[3] = new Client(4, "Thiện", 26, "khách mời");
-        clientList[4] = new Client(5, "Liên", 26, "khách quan");
+        clientList = new ClientModel[size * size];
+        clientList[0] = new ClientModel(1, "Long", 23, "khách VIP");
+        clientList[1] = new ClientModel(2, "Hậu", 20, "khách du lịch");
+        clientList[2] = new ClientModel(3, "Hưng", 27, "khách hàng");
+        clientList[3] = new ClientModel(4, "Thiện", 26, "khách mời");
+        clientList[4] = new ClientModel(5, "Liên", 26, "khách quan");
     }
 
 
     @Override
-    public Client[] findAll() {
-        Client[] clients = new Client[size];
+    public ClientModel[] findAll() {
+        ClientModel[] clients = new ClientModel[size];
         for (int i = 0; i < size; i++) {
             clients[i] = clientList[i];
         }
@@ -29,7 +29,7 @@ public class Clientlmpl implements IClient {
     }
 
     @Override
-    public void addCilent(Client client) {
+    public void addCilent(ClientModel client) {
         if (size > clientList.length || size < 0) {
             throw new IndexOutOfBoundsException("Không thể thêm khách này");
         } else {

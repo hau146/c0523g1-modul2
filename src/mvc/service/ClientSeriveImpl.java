@@ -1,19 +1,19 @@
 package mvc.service;
 
-import mvc.model.Client;
-import mvc.repository.Clientlmpl;
-import mvc.repository.IClient;
+import mvc.model.ClientModel;
+import mvc.repository.ClienRepositorytlmpl;
+import mvc.repository.IClientRepository;
 
-public class ClientSeriveLmpl implements ICilentService {
-    private IClient client = new Clientlmpl();
+public class ClientSeriveImpl implements ICilentService {
+    private IClientRepository client = new ClienRepositorytlmpl();
 
     @Override
-    public Client[] finAll() {
+    public ClientModel[] finAll() {
         return client.findAll();
     }
 
     @Override
-    public void addCilent(Client cilentController) {
+    public void addCilent(ClientModel cilentController) {
         client.addCilent(cilentController);
     }
 
