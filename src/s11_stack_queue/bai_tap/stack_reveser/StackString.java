@@ -9,7 +9,7 @@ public class StackString {
     private String string;
 
     public StackString() {
-        wStack = new ArrayList<>();
+        wStack = new ArrayList();
     }
 
     public ArrayList<String> push(String str) {

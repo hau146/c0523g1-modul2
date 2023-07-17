@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class TestStackNumber {
     public static void main(String[] args) {
-        StackNumber stack = new StackNumber();
+        StackNumber<Number> stack = new StackNumber();
         stack.push(1);
         stack.push(2);
         stack.push(3);

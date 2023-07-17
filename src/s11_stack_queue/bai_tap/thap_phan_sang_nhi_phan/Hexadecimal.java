@@ -1,4 +1,4 @@
-package s11_stack_queue.bai_tap.ThapPhanSangNhiPhan;
+package s11_stack_queue.bai_tap.thap_phan_sang_nhi_phan;
 
 import java.util.ArrayList;
 
