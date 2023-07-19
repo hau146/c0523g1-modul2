@@ -18,7 +18,8 @@ public class ProductController {
             System.out.println("3. Xóa sản phẩm");
             System.out.println("4. Xem danh sách sản phẩm");
             System.out.println("5. Tìm kiếm sản phẩm");
-            System.out.println("6. Sắp xếp giá sản phẩm tăng/ giảm dần\n");
+            System.out.println("6. Sắp xếp giá sản phẩm tăng/ giảm dần");
+            System.out.println("0. Exit Menu\n");
             selection = Integer.parseInt(scanner.nextLine());
             switch (selection){
                 case 1:
@@ -39,6 +40,8 @@ public class ProductController {
                 case 6:
                     productService.sortByPriceProduct();
                     break;
+                case 0:
+                    System.exit(0);
             }
         } while (true);
     }
