@@ -20,10 +20,10 @@ public class Bracket {
             }
             bStack.clear();
         } else {
-            System.out.println(str + "\t???");
+
+       System.out.println(str + "\t???");
         }
     }
-
     public int size() {
         return bStack.size();
     }
