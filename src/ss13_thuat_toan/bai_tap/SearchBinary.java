@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class SearchBinary {
     public static int binarySearch(ArrayList array, int left, int right, int value) {
-        while (left > right) {
+        while (left < right) {
             int middle = (left + right) / 2;
             int arr = ((int) array.get(middle));
             if (arr == value) {
