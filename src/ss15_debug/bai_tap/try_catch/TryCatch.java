@@ -7,8 +7,7 @@ import java.util.Scanner;
 public class TryCatch {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean flag = false;
-        do {
+        while (true) {
             try {
                 System.out.println("Nhập vào cạnh a");
                 int a = Integer.parseInt(scanner.nextLine());
@@ -19,13 +18,13 @@ public class TryCatch {
                 checkErr(a, b, c);
             } catch (IllegalTriangleException e) {
                 System.err.println(e.getMessage());
-                flag = true;
+                break;
             } catch (NumberFormatException e) {
                 System.err.println("Vui lòng nhập vào số\n");
-                flag = true;
+                break;
             }
-        } while (flag);
-        System.out.println("Là 3 cạnh của tam giác");
+            System.out.println("Là 3 cạnh của tam giác\n");
+        }
     }
 
     public static void checkErr(int a, int b, int c) throws IllegalTriangleException {
