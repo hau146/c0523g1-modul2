@@ -29,6 +29,7 @@ public class ListNation {
         String line = "";
         for (Nation naiton : nationList) {
             line = naiton.getId() + COMPA + naiton.getCode() + COMPA + naiton.getName();
+            FileUtils.readFile(FILE_NAME);
             FileUtils.writeFile(FILE_NAME, line);
         }
     }

@@ -38,15 +38,24 @@ public class CopyFileText {
                 bufferedWriter.write(readFileText(filePath).get(i));
                 i++;
             }
+            bufferedWriter.newLine();
+            bufferedWriter.write("Có " + countTheCharacter(readFileText(filePath)) + " kí tự");
             bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    public int countTheCharacter(ArrayList<String> arrayList) {
+        String str = arrayList.toString();
+        String[] newArr = str.split("");
+        return (newArr.length - 2); // -2 bởi vì tách ra để đếm từ arraylist sẽ bị dính dấu []
+
+    }
+
     public static void main(String[] args) {
         String inputFile = "D:\\c0523g1-modul2\\src\\ss16_text_file\\bai_tap\\nguyenhuuhau.csv";
-        String outputFile = "D:\\c0523g1-modul2\\src\\ss16_text_file\\bai_tap\\nguyenhuuhau10.csv";
+        String outputFile = "D:\\c0523g1-modul2\\src\\ss16_text_file\\bai_tap\\nguyenhuuhau11.csv";
         CopyFileText copyFile = new CopyFileText();
         copyFile.coppyFileText(inputFile, outputFile);
     }

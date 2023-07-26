@@ -1,45 +1,25 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class test {
     public static void main(String[] args) {
+        try {
+            InputStream is = new FileInputStream("Codegym.txt");
+            byte[] bytes = new byte[10];
+            int i = -1;
+            // Đọc lần lượt các byte (8bit) trong luồng và lưu vào biến i
+            // Khi đọc ra giá trị -1 nghĩa là kết thúc luồng.
+            while ((i = is.read(bytes)) != -1) {
+                String s = new String(bytes, 0, 1);
+                System.out.println(s);
 
-//         java.io.File file = new java.io.File("image/us.gif");
-//
-//         System.out.println("Does it exist? " + file.exists());
-//
-//         System.out.println("The file has " + file.length() + " bytes");
-//
-//         System.out.println("Can it be read? " + file.canRead());
-//
-//         System.out.println("Can it be written? " + file.canWrite());
-//
-//         System.out.println("Is it a directory? " + file.isDirectory());
-//
-//         System.out.println("Is it a file? " + file.isFile());
-//
-//         System.out.println("Is it absolute? " + file.isAbsolute());
-//
-//         System.out.println("Is it hidden? " + file.isHidden());
-//
-//         System.out.println("Absolute path is " +
-//
-//                 file.getAbsolutePath());
-//
-//         System.out.println("Last modified on " +
-//
-//                 new java.util.Date(file.lastModified()));
+            }
+            is.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
-
-//    public static String[] numToStr(int[] arr) {
-//        for (int i = 0; i < arr.length ; i++) {
-//            if (arr[i] < 0){
-//                arr[i] = Integer.parseInt("Dojo");
-//            } else {
-//                String tmep = String.valueOf(arr[i]);
-//                arr[i] = Integer.parseInt(tmep);
-//            }
-//        }
-//        return arr;
-//    }
 }
