@@ -54,8 +54,8 @@ public class CopyFileText {
     }
 
     public static void main(String[] args) {
-        String inputFile = "D:\\c0523g1-modul2\\src\\ss16_text_file\\bai_tap\\nguyenhuuhau.csv";
-        String outputFile = "D:\\c0523g1-modul2\\src\\ss16_text_file\\bai_tap\\nguyenhuuhau11.csv";
+        String inputFile = "D:\\c0523g1-modul2\\src\\ss16_text_file\\bai_tap\\nguyen_huu_hau.csv";
+        String outputFile = "D:\\c0523g1-modul2\\src\\ss16_text_file\\bai_tap\\nguyen_huu_hau_11.csv";
         CopyFileText copyFile = new CopyFileText();
         copyFile.coppyFileText(inputFile, outputFile);
     }
