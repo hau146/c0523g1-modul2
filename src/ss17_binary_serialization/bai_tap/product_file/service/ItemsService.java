@@ -99,6 +99,7 @@ public class ItemsService implements InterfaceItemsService {
                     Items editItem = new Items(editName, editPrice, editProduction, editDescribe);
                     itemsRepo.editItems(indexItems, editItem);
                     System.out.println("\nSửa thành công");
+                    break;
                 }
             } catch (NumberFormatException e) {
                 System.err.println("Hãy nhập vào số !");

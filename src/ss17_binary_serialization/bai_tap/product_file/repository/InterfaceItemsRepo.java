@@ -14,5 +14,6 @@ public interface InterfaceItemsRepo {
     void deleteItems(int id);
 
     void editItems(int id, Items items);
+
     int searchIndex(int id);
 }

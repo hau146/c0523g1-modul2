@@ -68,6 +68,10 @@ public class Items implements Serializable {
         this.describe = describe;
     }
 
+    public String getInfoToCSV() {
+        return this.idItems + "," + this.nameItems + "," + this.priceItems + "," + this.productionItems + "," + this.describe;
+    }
+
     @Override
     public String toString() {
         return "Items{" +
