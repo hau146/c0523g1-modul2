@@ -3,12 +3,11 @@ package case_tudy.model.person;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Employee extends Person {
+public class Employee extends Person implements Serializable {
     private String levelEmployee; //trình độ
     private String locationEmployee; //vị trí
     private int wageEmployee; //lương
-    private static final long serialVersionUID = -6L;
-
+    private static final long serialVersionUID = -4163933488698256234L;
 
 
     public Employee(String levelEmployee, String locationEmployee, int wageEmployee) {
@@ -18,13 +17,14 @@ public class Employee extends Person {
     }
 
     public Employee(String id, String name, LocalDate dateBirth, String sex, String numberPhone, String numberCMND, String email, String levelEmployee, String locationEmployee, int wageEmployee) {
-        super(id, name, dateBirth, sex,numberPhone, numberCMND, email);
+        super(id, name, dateBirth, sex, numberPhone, numberCMND, email);
         this.levelEmployee = levelEmployee;
         this.locationEmployee = locationEmployee;
         this.wageEmployee = wageEmployee;
     }
+
     public Employee(String name, LocalDate dateBirth, String sex, String numberPhone, String numberCMND, String email, String levelEmployee, String locationEmployee, int wageEmployee) {
-        super(name, dateBirth, sex,numberPhone, numberCMND, email);
+        super(name, dateBirth, sex, numberPhone, numberCMND, email);
         this.levelEmployee = levelEmployee;
         this.locationEmployee = locationEmployee;
         this.wageEmployee = wageEmployee;

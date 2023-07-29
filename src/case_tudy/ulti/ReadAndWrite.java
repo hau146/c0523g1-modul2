@@ -21,6 +21,7 @@ public class ReadAndWrite {
         } finally {
             try {
                 bufferedWriter.close();
+                fileWriter.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -45,6 +46,7 @@ public class ReadAndWrite {
         } finally {
             try {
                 bufferedReader.close();
+                fileReader.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

@@ -13,15 +13,15 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public List<Employee> showAllEmployee() {
-        List<Employee> employees = new ArrayList<>();
+        List<Employee> employeeList = new ArrayList<>();
         List<String> stringList = ReadAndWrite.readToFileCVS(FILE_EMPLOYEE);
         String[] array = null;
         for (String string : stringList) {
             array = string.split(",");
-            Employee employee = new Employee(array[0], LocalDate.parse(array[1]), array[2], array[3], array[4], array[5], array[6], array[7], Integer.parseInt(array[8]));
-            employees.add(employee);
+            Employee employee = new Employee(array[0], array[1], LocalDate.parse(array[2]), array[3], array[4], array[5], array[6], array[7], array[8], Integer.parseInt(array[9]));
+            employeeList.add(employee);
         }
-        return employees;
+        return employeeList;
     }
 
     @Override
@@ -47,6 +47,7 @@ public class EmployeeRepository implements IEmployeeRepository {
         }
         return stringList;
     }
+
 
     @Override
     public void deleteEmployee(int indexEmployee) {

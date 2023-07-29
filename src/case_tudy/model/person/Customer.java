@@ -5,6 +5,7 @@ import java.time.LocalDate;
 public class Customer extends Person {
     private String typeCustomer;
     private String addressCustomer;
+    private static final long serialVersionUID = -6002711352792590208L;
 
     public Customer() {
     }
@@ -16,6 +17,11 @@ public class Customer extends Person {
 
     public Customer(String id, String name, LocalDate dateBirth, String sex, String numberPhone, String numberCMND, String email, String typeCustomer, String addressCustomer) {
         super(id, name, dateBirth, sex, numberPhone, numberCMND, email);
+        this.typeCustomer = typeCustomer;
+        this.addressCustomer = addressCustomer;
+    }
+    public Customer(String name, LocalDate dateBirth, String sex, String numberPhone, String numberCMND, String email, String typeCustomer, String addressCustomer) {
+        super(name, dateBirth, sex, numberPhone, numberCMND, email);
         this.typeCustomer = typeCustomer;
         this.addressCustomer = addressCustomer;
     }
@@ -36,7 +42,7 @@ public class Customer extends Person {
         this.addressCustomer = addressCustomer;
     }
 
-    public String getInfoCVS(String id, String name, String dateBirth, String sex, String numberCMND, String email) {
+    public String getInfoCVSCustomer() {
         return super.getInfoCVS() + this.typeCustomer + "," + this.addressCustomer;
     }
 

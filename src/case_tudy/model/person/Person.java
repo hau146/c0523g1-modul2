@@ -11,6 +11,7 @@ public abstract class Person implements Serializable {
     private String numberPhone;
     private String numberCMND;
     private String email;
+    private static final long serialVersionUID = 3236463905116936961L;
 
     public Person() {
     }
@@ -91,7 +92,7 @@ public abstract class Person implements Serializable {
     }
 
     public String getInfoCVS() {
-        return this.id + "," + this.name + "," + this.dateBirth + "," + this.sex + "," + this.numberCMND + "," + this.email + ",";
+        return this.id + "," + this.name + "," + this.dateBirth + "," + this.sex + "," + this.numberPhone + "," + this.numberCMND + "," + this.email + ",";
     }
 
     @Override
