@@ -56,7 +56,7 @@ public class Customer extends Person {
                 ", numberPhoneCustomer='" + this.getNumberPhone() + '\'' +
                 ", numberCMNDCustomer='" + this.getNumberCMND() + '\'' +
                 ", emailCustomer='" + this.getEmail() + '\'' +
-                "typeCustomer='" + typeCustomer + '\'' +
+                ", typeCustomer='" + typeCustomer + '\'' +
                 ", addressCustomer='" + addressCustomer + '\'' +
                 '}';
     }

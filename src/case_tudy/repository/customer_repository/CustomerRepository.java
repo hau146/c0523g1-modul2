@@ -46,16 +46,32 @@ public class CustomerRepository implements ICustomerRepository {
 
     @Override
     public void deleteCustomer(int indexCustomer) {
-
+        List<Customer> customerList = this.showAllCustomer();
+        customerList.remove(indexCustomer);
+        switchToString(customerList);
+        ReadAndWrite.writeToFileCVS(FILE_CUSTOMER,switchToString(customerList),false);
     }
 
     @Override
     public List<Customer> searchNameCustomer(String nameCustomer) {
-        return null;
+        List<Customer> customerList = this.showAllCustomer();
+        List<Customer> customers = new ArrayList<>();
+        for (int i = 0; i < customers.size() ; i++) {
+            if(customerList.get(i).getName().contains(nameCustomer)){
+                customers.add(customers.get(i));
+            }
+        }
+        return customers;
     }
 
     @Override
     public int searchIndex(String id) {
-        return 0;
+        List<Customer> customerList = this.showAllCustomer();
+        for (int i = 0; i < customerList.size() ; i++) {
+            if (customerList.get(i).getId().equals(id)){
+                return i;
+            }
+        }
+        return -1;
     }
 }

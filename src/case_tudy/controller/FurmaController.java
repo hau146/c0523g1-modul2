@@ -115,14 +115,19 @@ public class FurmaController {
             selectionCustomer = scanner();
             switch (selectionCustomer) {
                 case 1:
+                    customerService.displayCustomer();
                     break;
                 case 2:
+                    customerService.addCustomer();
                     break;
                 case 3:
+                    customerService.editCustomer();
                     break;
                 case 4:
+                    customerService.deleteCustomer();
                     break;
                 case 5:
+                    customerService.searchCustomer();
                     break;
                 case 6:
                     displayMainMenu();
