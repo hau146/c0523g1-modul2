@@ -1,4 +1,6 @@
-package case_tudy.model.facility;
+package test.test_case_tudy.model.facility;
+
+import case_tudy.model.facility.Facility;
 
 public class House extends Facility {
     private String roomStandardHouse;
@@ -36,7 +38,8 @@ public class House extends Facility {
 
     @Override
     public String toString() {
-        return "idHouse=" + this.getIdService() +
+        return "House{" +
+                "idHouse=" + this.getIdService() +
                 ", nameHouse='" + this.getNameService() + '\'' +
                 ", areaHouse=" + this.getAreaResort() +
                 ", renterHouse=" + this.getNumberPerson() +

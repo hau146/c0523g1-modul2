@@ -1,4 +1,6 @@
-package case_tudy.model.facility;
+package test.test_case_tudy.model.facility;
+
+import case_tudy.model.facility.Facility;
 
 import java.util.Objects;
 
@@ -49,7 +51,8 @@ public class Villa extends Facility {
 
     @Override
     public String toString() {
-        return "idVilla=" + this.getIdService() +
+        return "Villa{" +
+                "idVilla=" + this.getIdService() +
                 ", nameVilla='" + this.getNameService() + '\'' +
                 ", areaVilla=" + this.getAreaResort() +
                 ", renterVilla=" + this.getNumberPerson() +

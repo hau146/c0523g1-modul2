@@ -1,7 +1,6 @@
-package case_tudy.model.facility;
+package test.test_case_tudy.model.facility;
 
 import java.util.Date;
-import java.util.Objects;
 
 public abstract class Facility {
     private String idService;
@@ -81,18 +80,5 @@ public abstract class Facility {
                 ", priceService=" + priceService +
                 ", DateHire='" + DateHire + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Facility facility = (Facility) o;
-        return Objects.equals(idService, facility.idService);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(idService);
     }
 }

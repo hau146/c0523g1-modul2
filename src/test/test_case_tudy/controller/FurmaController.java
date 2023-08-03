@@ -1,4 +1,4 @@
-package case_tudy.controller;
+package test.test_case_tudy.controller;
 
 import case_tudy.service.booking.BookingService;
 import case_tudy.service.booking.IBookingService;
@@ -152,10 +152,8 @@ public class FurmaController {
                     menuFacility();
                     break;
                 case 3:
-                    facilityService.finAllMaintenance();
                     break;
                 case 4:
-                    facilityService.deleteFacility();
                     break;
                 case 5:
                     displayMainMenu();

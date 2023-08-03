@@ -1,4 +1,6 @@
-package case_tudy.model.person;
+package test.test_case_tudy.model.person;
+
+import case_tudy.model.person.Person;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -60,7 +62,7 @@ public class Employee extends Person implements Serializable {
 
     @Override
     public String toString() {
-        return  "idEmployee=" + this.getId() +
+        return "Employee{" + "idEmployee=" + this.getId() +
                 ", nameEmployee='" + this.getName() + '\'' +
                 ", dateBirthEmployee=" + this.getDateBirth() +
                 ", sexEmployee='" + this.getSex() + '\'' +

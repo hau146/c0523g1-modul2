@@ -1,4 +1,6 @@
-package case_tudy.model.facility;
+package test.test_case_tudy.model.facility;
+
+import case_tudy.model.facility.Facility;
 
 public class Room extends Facility {
     private String serviceFree;
@@ -25,7 +27,8 @@ public class Room extends Facility {
 
     @Override
     public String toString() {
-        return "idRoom=" + this.getIdService() +
+        return "Room{" +
+                "idRoom=" + this.getIdService() +
                 ", nameRoom='" + this.getNameService() + '\'' +
                 ", areaRoom=" + this.getAreaResort() +
                 ", renterRoom=" + this.getNumberPerson() +

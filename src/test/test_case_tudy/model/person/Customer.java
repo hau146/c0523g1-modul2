@@ -1,4 +1,6 @@
-package case_tudy.model.person;
+package test.test_case_tudy.model.person;
+
+import case_tudy.model.person.Person;
 
 import java.time.LocalDate;
 
@@ -20,7 +22,6 @@ public class Customer extends Person {
         this.typeCustomer = typeCustomer;
         this.addressCustomer = addressCustomer;
     }
-
     public Customer(String name, LocalDate dateBirth, String sex, String numberPhone, String numberCMND, String email, String typeCustomer, String addressCustomer) {
         super(name, dateBirth, sex, numberPhone, numberCMND, email);
         this.typeCustomer = typeCustomer;
@@ -49,7 +50,8 @@ public class Customer extends Person {
 
     @Override
     public String toString() {
-        return "idCustomer='" + this.getId() + '\'' +
+        return "Customer{" +
+                "idCustomer='" + this.getId() + '\'' +
                 ", nameCustomer='" + this.getName() + '\'' +
                 ", dateBirthCustomer='" + this.getDateBirth() + '\'' +
                 ", sexCustomer='" + this.getSex() + '\'' +
