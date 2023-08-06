@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAndWrite {
+    
     public static void writeToFileCVS(String filePath, List<String> strings, boolean append) {
         File file = new File(filePath);
         FileWriter fileWriter = null;

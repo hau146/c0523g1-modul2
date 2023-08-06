@@ -12,7 +12,7 @@ import case_tudy.service.facility.FacilityService;
 import case_tudy.service.facility.IFacilityService;
 
 import java.util.Scanner;
-public class FurmaController {
+public class FurmaController{
     static IEmployeeService employeeService = new EmployeeService();
     static ICustomerService customerService = new CustomerService();
     static IBookingService bookingService = new BookingService();
@@ -21,6 +21,7 @@ public class FurmaController {
     public static Scanner scanner = new Scanner(System.in);
 
     public static void displayMainMenu() {
+
         int selection = 0;
         do {
             try {
@@ -55,11 +56,13 @@ public class FurmaController {
                 }
             } catch (NumberFormatException e) {
                 System.err.println("Please enter the correct number !");
-            } catch (Exception e) {
-                System.err.println("At fault, please load again !");
+//            } catch (Exception e) {
+//                System.err.println("At fault, please load again !");
             }
         } while (true);
     }
+
+
 
 
     public static void employeeManagement() {
@@ -205,14 +208,19 @@ public class FurmaController {
             selectionBooking = Integer.parseInt(scanner.nextLine());
             switch (selectionBooking) {
                 case 1:
+                    bookingService.displayBooking();
                     break;
                 case 2:
+                    bookingService.addBooking();
                     break;
                 case 3:
+                    bookingService.newContracts();
                     break;
                 case 4:
+                    bookingService.displayContract();
                     break;
                 case 5:
+                    bookingService.editContracts();
                     break;
                 case 6:
                     displayMainMenu();

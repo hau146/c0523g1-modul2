@@ -13,7 +13,7 @@ public class CheckRegex {
     public static final String REGEX_CMND = "^[0-9]{9}$|^[0-9]{12}$";
     public static final String REGEX_NUMBER_PHONE = "^[0|84][0-9]{9}$";
 
-//    public static final String REGEX_DATE_BIRTH = "^\\d{1,2}[/|-]\\d{1,2}[/|-]\\d{4}$";
+    public static final String REGEX_DATE = "^\\d{1,2}[/|-]\\d{1,2}[/|-]\\d{4}$";
 
     public CheckRegex() {
     }
@@ -46,5 +46,8 @@ public class CheckRegex {
 
     public static boolean regexNumPhone(String numPhone) {
         return numPhone.matches(REGEX_NUMBER_PHONE);
+    }
+    public static boolean regexDate(String date) {
+        return date.matches(REGEX_DATE);
     }
 }

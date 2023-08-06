@@ -41,6 +41,7 @@ public class CheckErr {
         } while (!flag);
         return tyRegex;
     }
+
     public static String checkIdHouse(String input, String err, String tyRegex, boolean flag) {
         do {
             System.out.println(input);
@@ -52,6 +53,7 @@ public class CheckErr {
         } while (!flag);
         return tyRegex;
     }
+
     public static String checkIdRoom(String input, String err, String tyRegex, boolean flag) {
         do {
             System.out.println(input);
@@ -71,6 +73,19 @@ public class CheckErr {
             flag = CheckRegex.regexName(tyRegex);
             if (!flag) {
                 System.err.println(err);
+            }
+        } while (!flag);
+        return tyRegex;
+    }
+
+    public static LocalDate checkDate(String input, LocalDate tyRegex) {
+        boolean flag = true;
+        do {
+            System.out.println(input);
+            tyRegex = LocalDate.parse(scanner.nextLine());
+            flag = CheckRegex.regexDate(String.valueOf(tyRegex));
+            if (!flag) {
+                System.out.println("Vui lòng nhập đúng định dạng ngày tháng năm !");
             }
         } while (!flag);
         return tyRegex;
@@ -115,10 +130,10 @@ public class CheckErr {
         do {
             System.out.println(input);
             tyRegex = scanner.nextDouble();
-            if (tyRegex < 30*30) {
+            if (tyRegex < 30 * 30) {
                 System.err.println(err);
             }
-        } while (tyRegex < 30*30);
+        } while (tyRegex < 30 * 30);
         return tyRegex;
     }
 

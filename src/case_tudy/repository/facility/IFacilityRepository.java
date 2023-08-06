@@ -12,6 +12,7 @@ public interface IFacilityRepository {
     LinkedHashMap<Villa,Integer> finAllVilla();
     LinkedHashMap<House,Integer> finAllHouse();
     LinkedHashMap<Room,Integer> finAllRoom();
+    LinkedHashMap<Facility,Integer> finAllFacility();
     void addVilla(Villa villa,Integer integer);
     void addHouse (House house,Integer integer);
     void addRoom(Room room,Integer integer);

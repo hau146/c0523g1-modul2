@@ -60,6 +60,11 @@ public class FacilityRepository implements IFacilityRepository {
     }
 
     @Override
+    public LinkedHashMap<Facility, Integer> finAllFacility() {
+        return facilityLinkedHashMap;
+    }
+
+    @Override
     public void addVilla(Villa villa, Integer integer) {
         facilityLinkedHashMap.put(villa, integer);
     }
