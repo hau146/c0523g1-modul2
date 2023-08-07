@@ -26,21 +26,19 @@ public class BookingService implements IBookingService {
     ICustomerRepository customerRepository = new CustomerRepository();
     static Scanner scanner = new Scanner(System.in);
     Map<Facility, Integer> myMap = new TreeMap<>();
-    List<Facility> facilityList = new ArrayList<>();
     Queue<Booking> queue = new ArrayDeque<>();
     String getIdBooking = "";
     List<String> stringList = new ArrayList<>();
 
-
     @Override
     public void displayBooking() {
         List<Booking> bookingList = bookingRepository.finAllBooking();
-        if (facilityList.size() == 0 && bookingList.size() == 0) {
+        if (myMap.size() == 0 && bookingList.size() == 0) {
             System.err.println("Hiện tại không có dịch vụ nào được booking !");
         } else {
             System.out.println("\n---Danh sách dịch vụ---");
-            for (Facility facility : facilityList) {
-                System.out.println(facility);
+            for (Map.Entry<Facility, Integer> entry : myMap.entrySet()) {
+                System.out.println(entry.getKey() + " - Đã được booking : " + entry.getValue() + " lần");
             }
             System.out.println("Đã được booking bởi khách hàng có :");
             for (Booking booking : bookingList) {
@@ -50,6 +48,7 @@ public class BookingService implements IBookingService {
         System.out.println("---------------------");
     }
 
+    @Override
     public void displayContract() {
         List<Contract> contractList = bookingRepository.finALlContract();
         if (contractList.size() == 0) {
@@ -80,8 +79,7 @@ public class BookingService implements IBookingService {
             } else if (index == -1) {
                 System.err.println(">Không có id khách này để booking !<");
             } else {
-//                facilityTreeSet.add(key);
-//                myMap.put(key, bookingRepository.numberBooking());
+                myMap.put(key, bookingRepository.numberBooking());
                 for (Booking str : queue) {
                     if (str.equals(idCustomer)) {
                         System.err.println("Khách hàng này đã booking rồi !\n");
@@ -89,19 +87,14 @@ public class BookingService implements IBookingService {
                     }
                 }
                 bookingRepository.addBooking(key, bookingRepository.numberBooking());
-                facilityList.add(key);
-//                queue.add(idCustomer);
                 System.out.println("\n---Nhập ngày booking !---");
                 LocalDate dateBooking = LocalDate.parse(scanner.nextLine());
-//                dateBooking = CheckErr.checkDate(inputBooking, dateBooking);
 
                 System.out.println("\n---Nhập ngày bắt đầu thuê !---");
                 LocalDate starDate = LocalDate.parse(scanner.nextLine());
-//                starDate = CheckErr.checkDate(inputStartDate, starDate);
 
                 System.out.println("\n---Nhập ngày kết thúc thuê !---");
                 LocalDate endDate = LocalDate.parse(scanner.nextLine());
-//                endDate = CheckErr.checkDate(intputEndDate, endDate);
 
                 System.out.println("\nBooking thành công !");
                 System.out.println("Mã booking của bạn là : " + Treatment.treatment(dateBooking, idCustomer));

@@ -31,7 +31,6 @@ public class Room extends Facility {
                 ", renterRoom=" + this.getNumberPerson() +
                 ", priceRoom=" + this.getPriceService() +
                 ", DateHire='" + this.getDateHire() + '\'' +
-                "serviceFree='" + serviceFree + '\'' +
-                '}';
+                "serviceFree='" + serviceFree + '\'';
     }
 }

@@ -12,12 +12,12 @@ public class FacilityRepository implements IFacilityRepository {
     private static LinkedHashMap<Facility, Integer> facilityLinkedHashMap = new LinkedHashMap<>();
 
     static {
-        Villa villa1 = new Villa("SVVL-0001", "Luxury villa", 500, 20000, 10, "Day", "Vip", 80, 3);
-        Villa villa2 = new Villa("SVVL-0002", "Magical villa", 400, 17000, 4, "Month", "Magic", 45, 2);
-        House house1 = new House("SVHO-0001", "Street house", 200, 10000, 2, "Hour", "Premium", 2);
-        House house2 = new House("SVHO-0002", "Ordinary house", 100, 9000, 1, "Hour", "Normal", 1);
-        Room room1 = new Room("SVRO-0001", "Genuine room", 50, 5000, 3, "Day", "Relax");
-        Room room2 = new Room("SVRO-0002", "Chill room", 40, 7000, 6, "Month", "DJ");
+        Facility villa1 = new Villa("SVVL-0001", "Luxury villa", 500, 20000, 10, "Day", "Vip", 80, 3);
+        Facility villa2 = new Villa("SVVL-0002", "Magical villa", 400, 17000, 4, "Month", "Magic", 45, 2);
+        Facility house1 = new House("SVHO-0001", "Street house", 200, 10000, 2, "Hour", "Premium", 2);
+        Facility house2 = new House("SVHO-0002", "Ordinary house", 100, 9000, 1, "Hour", "Normal", 1);
+        Facility room1 = new Room("SVRO-0001", "Genuine room", 50, 5000, 3, "Day", "Relax");
+        Facility room2 = new Room("SVRO-0002", "Chill room", 40, 7000, 6, "Month", "DJ");
         facilityLinkedHashMap.put(villa1, 0);
         facilityLinkedHashMap.put(villa2, 0);
         facilityLinkedHashMap.put(house1, 0);

@@ -43,7 +43,6 @@ public class House extends Facility {
                 ", priceHouse=" + this.getPriceService() +
                 ", DateHouse='" + this.getDateHire() + '\'' +
                 "roomStandardHouse='" + roomStandardHouse + '\'' +
-                ", numberFloorsHouse=" + numberFloorsHouse +
-                '}';
+                ", numberFloorsHouse=" + numberFloorsHouse;
     }
 }

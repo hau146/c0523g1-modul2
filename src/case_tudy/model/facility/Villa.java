@@ -57,7 +57,6 @@ public class Villa extends Facility {
                 ", DateHireVilla='" + this.getDateHire() + '\'' +
                 "roomStandard='" + roomStandardVilla + '\'' +
                 ", areaPool=" + areaPool +
-                ", numberFloors=" + numberFloorsVilla +
-                '}';
+                ", numberFloors=" + numberFloorsVilla;
     }
 }

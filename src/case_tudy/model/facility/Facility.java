@@ -1,9 +1,7 @@
 package case_tudy.model.facility;
-
-import java.util.Date;
 import java.util.Objects;
 
-public abstract class Facility {
+public abstract class Facility implements Comparable<Facility> {
     private String idService;
     private String nameService;
     private double areaResort;
@@ -73,14 +71,12 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Facility{" +
-                "idService=" + idService +
+        return "idService=" + idService +
                 ", nameService='" + nameService + '\'' +
                 ", areaResort=" + areaResort +
                 ", numberPerson=" + numberPerson +
                 ", priceService=" + priceService +
-                ", DateHire='" + DateHire + '\'' +
-                '}';
+                ", DateHire='" + DateHire + '\'';
     }
 
     @Override
@@ -94,5 +90,10 @@ public abstract class Facility {
     @Override
     public int hashCode() {
         return Objects.hash(idService);
+    }
+
+    @Override
+    public int compareTo(Facility o) {
+        return this.idService.compareTo(o.idService);
     }
 }
